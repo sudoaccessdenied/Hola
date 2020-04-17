@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melonskart.HolaClient.Controller.MainController">
+  <children>
+    <HBox alignment="TOP_RIGHT" layoutX="0.0" layoutY="0.0" minWidth="56.0" prefHeight="29.0" prefWidth="800.0000915527344" style="-fx-background-color: linear-gradient(#c43e00,#ff6f00,#ffa040)" stylesheets="@main.css">
+      <children>
+        <ImageView fitHeight="29.0" fitWidth="29.0" onMouseClicked="#minimizeButton" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../res/baseline_minimize_white_18dp.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="29.0" fitWidth="29.0" onMouseClicked="#closeButton" pickOnBounds="true" preserveRatio="true" style="-fx-background-color:white;">
+          <image>
+            <Image url="@../res/baseline_close_white_18dp.png" />
+          </image>
+        </ImageView>
+      </children>
+    </HBox>
+      <Pane fx:id="headingPane" layoutX="339.0" layoutY="36.0" prefHeight="95.0" prefWidth="453.0" styleClass="pane" stylesheets="@main.css">
+         <children>
+            <Text fx:id="headName" layoutX="23.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="log-name" text="Nishant" />
+            <Text fx:id="headMobile" fill="WHITE" layoutX="23.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="+91 8528796341" />
+         </children>
+      </Pane>
+      <JFXListView fx:id="conversationPane" layoutX="339.0" layoutY="140.0" prefHeight="349.0" prefWidth="453.0" styleClass="pane" stylesheets="@main.css" />
+  <TabPane layoutX="6.0" layoutY="190.0" prefHeight="404.0" prefWidth="327.0" stylesheets="@main.css" tabClosingPolicy="UNAVAILABLE">
+    <tabs>
+      <Tab text="Chats">
+        <content>
+          <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="paneA">
+                     <children>
+                        <JFXListView fx:id="chatList" layoutX="9.0" layoutY="11.0" onMouseClicked="#handleMouseClick" prefHeight="338.0" prefWidth="309.0" styleClass="pane" stylesheets="@main.css" />
+                     </children>
+                  </AnchorPane>
+        </content>
+      </Tab>
+    </tabs>
+  </TabPane>
+      <Pane layoutX="6.0" layoutY="35.0" prefHeight="149.0" prefWidth="327.0" stylesheets="@main.css">
+         <children>
+        <Text fx:id="userNameTitle" fill="#ebebeb" layoutX="53.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="log-name" text="Anonymous" />
+            <JFXHamburger fx:id="hamb" layoutX="272.0" layoutY="26.0" prefHeight="25.0" prefWidth="29.0" stylesheets="@main.css" />
+            <Text fill="#f2ebeb" layoutX="27.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Welcome" />
+            <Text fx:id="myMobile" fill="#f2ebeb" layoutX="53.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="+91 9023074498" />
+
+
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="pane" />
+         </styleClass>
+      </Pane>
+      <Pane fx:id="textPane" layoutX="339.0" layoutY="499.0" prefHeight="95.0" prefWidth="453.0" styleClass="pane" stylesheets="@main.css">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="347.0" layoutY="27.0" onAction="#handleSendButton" prefHeight="37.0" prefWidth="70.0" ripplerFill="#57124d" text="Send" />
+            <JFXTextArea fx:id="textToSend" focusColor="#bb86fc" labelFloat="true" layoutX="17.0" layoutY="33.0" prefHeight="29.0" prefWidth="315.0" promptText="Type Your Message here ..." style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </Pane>
+      <StackPane fx:id="stackPane" layoutX="325.0" layoutY="322.0" prefHeight="46.0" prefWidth="29.0" />
+  </children>
+</AnchorPane>

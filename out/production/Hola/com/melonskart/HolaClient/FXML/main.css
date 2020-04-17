@@ -1,0 +1,146 @@
+
+*{
+
+    -fx-primary:#bb86fc;
+    -fx-secondary:#03dac6;
+    -fx-background:#121212;
+    -fx-error:#cf6679;
+    -fx-text-primary:#000000;
+    -fx-text-background:#ffffff;
+}
+
+.tab-pane *.tab-header-area *.tab-header-background {
+    -fx-background-color:-fx-background;
+
+}
+
+
+/*.tab-pane {*/
+/*    -fx-tab-min-width:120px;*/
+/*    -fx-tab-max-width:120px;*/
+/*    -fx-tab-min-height:50px;*/
+/*    -fx-tab-max-height:50px;*/
+/*}*/
+
+.tab {
+
+    -fx-font-size: 16px;
+    -fx-background-color:-fx-background;
+    -fx-pref-width: 155;
+    -fx-pref-height: 40;
+
+
+}
+/*.tab-label {*/
+/*    -fx-text-fill: -fx-text-background ;*/
+
+
+/*}*/
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 150.0;
+    -fx-text-fill: -fx-text-background;
+}
+
+.tab:selected {
+    -fx-border-style: solid none solid none;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: -fx-primary;
+    -fx-text-fill: -fx-primary;
+
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 150.0;
+    -fx-text-fill: -fx-primary;
+}
+/*.tab:selected .tab-label {*/
+/*    -fx-text-fill: -fx-primary ;*/
+/*}*/
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: -fx-focus-color;
+}
+
+
+/*design for pane*/
+
+
+.root{
+    -fx-background-color: black;
+
+}
+
+.pane{
+
+    -fx-background-color: -fx-background;
+    -fx-background-radius: 16px;
+}
+
+.paneA{
+    -fx-background-color: -fx-background;
+}
+
+
+/*jfx button style*/
+
+
+.button{
+
+    -fx-background-color: -fx-primary;
+    -fx-font-weight: bold;
+    -fx-text-fill:black;
+
+}
+
+.jfx-hamburger {
+    -fx-background-color: -fx-background;
+}
+
+.jfx-hamburger StackPane {
+    -fx-background-color: white;
+}
+
+/*context menu item*/
+
+
+.menu-item .label {
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+    -fx-padding: 12px 12px;
+}
+
+.menu-item:focused {
+    -fx-background-color: derive(-fx-background,20%);
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: -fx-primary;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: black;
+    /*-fx-pref-width: 300;*/
+
+    /*-fx-pref-height: 100;*/
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+    /*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}
+
+
+/*log name*/
+.log-name{
+    -fx-font-size: 24px;
+    -fx-font-family: "Forte";
+    -fx-fill:white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.8) , 5, 0.0 , 0 , 1 );
+}

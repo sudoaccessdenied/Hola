@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melonskart.HolaClient.Controller.SignUpController">
+  <children>
+    <AnchorPane id="loginLayout" prefHeight="400.0" prefWidth="599.9998779296875" style="-fx-background-color: linear-gradient(#c43e00,#ff6f00,#ffa040)">
+      <children>
+        <ImageView fitHeight="162.0" fitWidth="162.0" layoutX="69.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../res/icons8-lock-512.png" />
+          </image>
+        </ImageView>
+        <Text id="hola" fill="#ff7a00" fontSmoothingType="GRAY" layoutX="128.0" layoutY="75.0" scaleX="4.248929663608562" scaleY="5.35524798154556" strokeType="OUTSIDE" strokeWidth="0.0" text="Hola">
+          <font>
+            <Font name="Forte" size="12.0" />
+          </font>
+        </Text>
+        <HBox layoutX="543.0" layoutY="0.0" minWidth="56.0" prefHeight="29.0" prefWidth="56.0">
+          <children>
+            <ImageView fitHeight="29.0" fitWidth="29.0" onMouseClicked="#minimizeButton" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/baseline_minimize_white_18dp.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" onMouseClicked="#closeButton" pickOnBounds="true" preserveRatio="true" style="-fx-background-color:white;">
+              <image>
+                <Image url="@../res/baseline_close_white_18dp.png" />
+              </image>
+            </ImageView>
+          </children>
+        </HBox>
+        <HBox layoutX="4.0" layoutY="3.0" minHeight="29.0" prefHeight="29.0" prefWidth="34.0">
+          <children>
+            <ImageView fitHeight="31.0" fitWidth="31.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/baseline_arrow_back_white_18dp.png" />
+              </image>
+            </ImageView>
+          </children>
+        </HBox>
+            <Pane fx:id="wrapPane" layoutX="253.0" layoutY="48.0" prefHeight="333.0" prefWidth="287.0">
+               <children>
+              <TextField fx:id="mobileNumber" alignment="TOP_LEFT" layoutX="42.0" layoutY="14.0" prefHeight="25.0" prefWidth="217.0" promptText="Mobile Number" />
+              <Button fx:id="sendOTPButton" layoutX="42.0" layoutY="53.0" mnemonicParsing="false" onAction="#sendOTPButton" stylesheets="@login.css" text="Send OTP" />
+                  <Pane fx:id="passwordPane" layoutY="99.0" prefHeight="178.0" prefWidth="287.0">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/baseline_lock_white_18dp.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="otp" disable="false" layoutX="53.0" layoutY="20.0" prefWidth="200.0" promptText="Enter OTP" />
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="19.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/baseline_lock_white_18dp.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="password" disable="false" layoutX="53.0" layoutY="102.0" prefWidth="200.0" promptText="Password" />
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="19.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/baseline_lock_white_18dp.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="confirmPassword" disable="false" layoutX="53.0" layoutY="144.0" onKeyReleased="#passwordMatch" prefWidth="200.0" promptText="Password" />
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="19.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/baseline_account_circle_white_18dp.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="name" layoutX="53.0" layoutY="58.0" prefHeight="25.0" prefWidth="200.0" promptText="Name" />
+                     </children>
+                  </Pane>
+              <Button fx:id="signUpButton" layoutX="48.0" layoutY="284.0" mnemonicParsing="false" onAction="#signUpButtonAction" stylesheets="@login.css" text="Sign Up" />
+              <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="15.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                  <Image url="@../res/baseline_account_circle_white_18dp.png" />
+                </image>
+              </ImageView>
+               </children>
+            </Pane>
+        <Label fx:id="status" layoutX="380.0" layoutY="27.0" text="Status" textFill="RED" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
