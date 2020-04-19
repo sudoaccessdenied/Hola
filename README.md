@@ -4,7 +4,7 @@ ___
 ## Usage :
 Hola is a Text messeging java Application.First start the Hola client and then enter the server address of Hola. To send SMS first user need to signup for Hola.Then after login user need to add mobile number of the another user.If another user is already registered for hola then user name will be appeared in chat section.You will see the name of user as Anonymous if the added contact in not a Hola user.Now in order to send messesge both the sender and receiver must add contact of each other.If the receiver did not added the sender contact the ther receiver will only see the notification of sender message. 
 
-![Video demo ](../demo.webm)
+![Video demo ](demo.webm)
 
 
 ## Technical Detail: 
